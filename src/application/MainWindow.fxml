@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
-<?import javafx.scene.control.ContextMenu?>
-<?import javafx.scene.control.CustomMenuItem?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
@@ -17,7 +14,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane prefHeight="661.0" prefWidth="1147.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.TRPGToolController">
+<BorderPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.TRPGToolController">
    <top>
       <MenuBar prefHeight="9.0" prefWidth="651.0" BorderPane.alignment="CENTER">
         <menus>
@@ -44,76 +41,25 @@
         <tabs>
           <Tab text="戦闘画面">
             <content>
-              <AnchorPane focusTraversable="true" minHeight="0.0" minWidth="0.0" prefHeight="559.0" prefWidth="760.0">
+              <AnchorPane focusTraversable="true" prefHeight="661.0" prefWidth="1300.0">
                      <children>
-                        <BorderPane layoutY="-1.0" prefHeight="610.0" prefWidth="1147.0">
-                           <bottom>
-                              <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
-                                <tabs>
-                                  <Tab text="メイン">
-                                    <content>
-                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                                             <children>
-                                                <TableView prefHeight="171.0" prefWidth="508.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="639.0" AnchorPane.topAnchor="0.0">
-                                                  <columns>
-                                                    <TableColumn editable="false" prefWidth="226.0" sortable="false" text="キャラクター名" />
-                                                      <TableColumn prefWidth="56.0" sortable="false" text="HP" />
-                                                      <TableColumn editable="false" prefWidth="58.0" sortable="false" text="最大HP" />
-                                                      <TableColumn prefWidth="48.0" sortable="false" text="MP" />
-                                                      <TableColumn editable="false" prefWidth="49.0" sortable="false" text="最大MP" />
-                                                      <TableColumn editable="false" prefWidth="70.0" text="移動速度" />
-                                                  </columns>
-                                                </TableView>
-                                                <CheckBox layoutX="524.0" layoutY="14.0" mnemonicParsing="false" text="CheckBox" />
-                                             </children></AnchorPane>
-                                    </content>
-                                  </Tab>
-                                  <Tab text="ニフラム">
-                                    <content>
-                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                                             <children>
-                                                <TableView prefHeight="171.0" prefWidth="631.0">
-                                                   <columns>
-                                                      <TableColumn editable="false" prefWidth="226.0" sortable="false" text="キャラクター名" />
-                                                      <TableColumn prefWidth="56.0" sortable="false" text="HP" />
-                                                      <TableColumn editable="false" prefWidth="58.0" sortable="false" text="最大HP" />
-                                                      <TableColumn prefWidth="48.0" sortable="false" text="MP" />
-                                                      <TableColumn editable="false" prefWidth="49.0" sortable="false" text="最大MP" />
-                                                      <TableColumn editable="false" prefWidth="65.0" text="移動速度" />
-                                                   </columns>
-                                                </TableView>
-                                                <CheckBox layoutX="644.0" layoutY="14.0" mnemonicParsing="false" text="CheckBox" />
-                                             </children></AnchorPane>
-                                    </content>
-                                  </Tab>
-                                    <Tab text="アマテラス">
-                                      <content>
-                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                                      </content>
-                                    </Tab>
-                                    <Tab text="傭兵団">
-                                      <content>
-                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                                      </content>
-                                    </Tab>
-                                </tabs>
-                              </TabPane>
-                           </bottom>
+                        <BorderPane layoutY="-1.0">
                            <top>
-                              <ListView prefHeight="410.0" prefWidth="1147.0" BorderPane.alignment="CENTER">
-                                 <contextMenu>
-                                    <ContextMenu>
-                                      <items>
-                                        <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-                                          <CustomMenuItem mnemonicParsing="false" text="Unspecified Action">
-                                            <content>
-                                              <CheckBox text="Click Me" />
-                                            </content>
-                                          </CustomMenuItem>
-                                      </items>
-                                    </ContextMenu>
-                                 </contextMenu>
-                              </ListView>
+                              <AnchorPane prefHeight="428.0" prefWidth="341.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <TableView layoutY="25.0">
+                                      <columns>
+                                        <TableColumn prefWidth="166.0" text="モンスター" />
+                                        <TableColumn prefWidth="46.0" text="HP" />
+                                          <TableColumn prefWidth="57.0" text="最大HP" />
+                                          <TableColumn prefWidth="45.0" text="MP" />
+                                          <TableColumn prefWidth="56.0" text="最大MP" />
+                                          <TableColumn prefWidth="43.0" text="位置" />
+                                      </columns>
+                                    </TableView>
+                                    <Button layoutX="372.0" layoutY="2.0" mnemonicParsing="false" text="ADD" />
+                                 </children>
+                              </AnchorPane>
                            </top>
                         </BorderPane>
                      </children>
@@ -122,101 +68,115 @@
           </Tab>
           <Tab text="PTメンバー能力リスト画面">
             <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <AnchorPane prefHeight="180.0" prefWidth="200.0">
                      <children>
                         <Label layoutX="24.0" layoutY="9.0" prefHeight="21.0" prefWidth="74.0" text="キャンペーン名" />
                         <ChoiceBox layoutX="98.0" layoutY="8.0" prefWidth="150.0" />
                         <Label layoutX="263.0" layoutY="9.0" prefHeight="21.0" prefWidth="70.0" text="キャラクター名" />
                         <ChoiceBox layoutX="333.0" layoutY="8.0" prefHeight="23.0" prefWidth="245.0" />
-                        <TabPane layoutY="43.0" prefHeight="567.0" prefWidth="1147.0" tabClosingPolicy="UNAVAILABLE">
+                        <TabPane layoutY="43.0" prefHeight="603.0" prefWidth="1300.0" tabClosingPolicy="UNAVAILABLE">
                           <tabs>
                             <Tab text="能力">
                               <content>
                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                        <children>
-                                          <TextField editable="false" layoutX="101.0" layoutY="12.0" prefHeight="27.0" prefWidth="266.0" />
-                                          <Label layoutX="32.0" layoutY="15.0" text="キャラクター名" />
-                                          <TextField editable="false" layoutX="780.0" layoutY="12.0" prefHeight="27.0" prefWidth="42.0" />
-                                          <Label alignment="CENTER" layoutX="373.0" layoutY="18.0" text="HP" />
-                                          <TextField editable="false" layoutX="399.0" layoutY="12.0" prefHeight="27.0" prefWidth="42.0" />
-                                          <Label alignment="CENTER" layoutX="448.0" layoutY="18.0" text="MP" />
-                                          <TextField editable="false" layoutX="675.0" layoutY="12.0" prefHeight="27.0" prefWidth="42.0" />
-                                          <Label alignment="CENTER" layoutX="518.0" layoutY="18.0" text="生命抵抗" />
-                                          <TextField editable="false" layoutX="871.0" layoutY="12.0" prefHeight="27.0" prefWidth="42.0" />
-                                          <Label alignment="CENTER" layoutX="620.0" layoutY="18.0" text="精神抵抗" />
-                                          <TextField editable="false" layoutX="1066.0" layoutY="13.0" prefHeight="27.0" prefWidth="42.0" />
-                                          <Label alignment="CENTER" layoutX="828.0" layoutY="18.0" text="先制力" />
-                                          <TextField editable="false" layoutX="572.0" layoutY="12.0" prefHeight="27.0" prefWidth="42.0" />
-                                          <Label alignment="CENTER" layoutX="920.0" layoutY="18.0" text="移動力" />
-                                          <TextField editable="false" layoutX="962.0" layoutY="12.0" prefHeight="27.0" prefWidth="42.0" />
-                                          <Label alignment="CENTER" layoutX="1011.0" layoutY="19.0" text="全力移動" />
-                                          <TextField editable="false" layoutX="473.0" layoutY="12.0" prefHeight="27.0" prefWidth="42.0" />
-                                          <Label alignment="CENTER" layoutX="725.0" layoutY="18.0" text="魔物知識" />
-                                          <TableView layoutX="99.0" layoutY="49.0" prefHeight="103.0" prefWidth="451.0">
+                                          <TextField editable="false" layoutX="83.0" layoutY="7.0" prefHeight="27.0" prefWidth="266.0" />
+                                          <Label layoutX="14.0" layoutY="10.0" text="キャラクター名" />
+                                          <TextField editable="false" layoutX="234.0" layoutY="136.0" prefHeight="27.0" prefWidth="42.0" />
+                                          <Label alignment="CENTER" layoutX="180.0" layoutY="61.0" text="HP" />
+                                          <TextField editable="false" layoutX="234.0" layoutY="54.0" prefHeight="27.0" prefWidth="42.0" />
+                                          <Label alignment="CENTER" layoutX="283.0" layoutY="61.0" text="MP" />
+                                          <TextField editable="false" layoutX="338.0" layoutY="94.0" prefHeight="27.0" prefWidth="42.0" />
+                                          <Label alignment="CENTER" layoutX="180.0" layoutY="100.0" text="生命抵抗" />
+                                          <TextField editable="false" layoutX="339.0" layoutY="137.0" prefHeight="27.0" prefWidth="42.0" />
+                                          <Label alignment="CENTER" layoutX="282.0" layoutY="100.0" text="精神抵抗" />
+                                          <TextField editable="false" layoutX="339.0" layoutY="178.0" prefHeight="27.0" prefWidth="42.0" />
+                                          <Label alignment="CENTER" layoutX="283.0" layoutY="143.0" text="先制力" />
+                                          <TextField editable="false" layoutX="234.0" layoutY="94.0" prefHeight="27.0" prefWidth="42.0" />
+                                          <Label alignment="CENTER" layoutX="178.0" layoutY="184.0" text="移動力" />
+                                          <TextField editable="false" layoutX="234.0" layoutY="178.0" prefHeight="27.0" prefWidth="42.0" />
+                                          <Label alignment="CENTER" layoutX="282.0" layoutY="184.0" text="全力移動" />
+                                          <TextField editable="false" layoutX="337.0" layoutY="54.0" prefHeight="27.0" prefWidth="42.0" />
+                                          <Label alignment="CENTER" layoutX="179.0" layoutY="142.0" text="魔物知識" />
+                                          <Label alignment="CENTER" layoutX="37.0" layoutY="270.0" text="冒険者レベル" />
+                                          <TextField editable="false" layoutX="227.0" layoutY="441.0" prefHeight="27.0" prefWidth="35.0" />
+                                          <Label alignment="CENTER" layoutX="152.0" layoutY="270.0" text="魔法系レベル合計" />
+                                          <TextField editable="false" layoutX="501.0" layoutY="336.0" prefHeight="27.0" prefWidth="35.0" />
+                                          <Label alignment="CENTER" layoutX="37.0" layoutY="311.0" text="ファイター" textAlignment="CENTER" />
+                                          <TextField editable="false" layoutX="501.0" layoutY="228.0" prefHeight="27.0" prefWidth="35.0" />
+                                          <Label alignment="CENTER" layoutX="37.0" layoutY="338.0" text="グラップラー" textAlignment="CENTER" />
+                                          <TextField editable="false" layoutX="227.0" layoutY="306.0" prefHeight="27.0" prefWidth="35.0" />
+                                          <Label alignment="CENTER" layoutX="37.0" layoutY="365.0" text="フェンサー" textAlignment="CENTER" />
+                                          <TextField editable="false" layoutX="227.0" layoutY="387.0" prefHeight="27.0" prefWidth="35.0" />
+                                          <Label alignment="CENTER" layoutX="37.0" layoutY="392.0" text="シューター" textAlignment="CENTER" />
+                                          <TextField editable="false" layoutX="501.0" layoutY="255.0" prefHeight="27.0" prefWidth="35.0" />
+                                          <Label alignment="CENTER" layoutX="142.0" layoutY="312.0" text="ソーサラー" textAlignment="CENTER" />
+                                          <TextField editable="false" layoutX="501.0" layoutY="282.0" prefHeight="27.0" prefWidth="35.0" />
+                                          <Label alignment="CENTER" layoutX="142.0" layoutY="338.0" text="コンジャラー" textAlignment="CENTER" />
+                                          <TextField editable="false" layoutX="95.0" layoutY="305.0" prefHeight="27.0" prefWidth="35.0" />
+                                          <Label alignment="CENTER" layoutX="142.0" layoutY="367.0" text="プリースト" textAlignment="CENTER" />
+                                          <TextField editable="false" layoutX="501.0" layoutY="363.0" prefHeight="27.0" prefWidth="35.0" />
+                                          <Label alignment="CENTER" layoutX="267.0" layoutY="365.0" text="信仰" />
+                                          <TextField editable="false" layoutX="297.0" layoutY="359.0" prefHeight="27.0" prefWidth="99.0" />
+                                          <Label alignment="CENTER" layoutX="142.0" layoutY="392.0" text="フェアリーテイマー" textAlignment="CENTER" />
+                                          <TextField editable="false" layoutX="227.0" layoutY="360.0" prefHeight="27.0" prefWidth="35.0" />
+                                          <Label alignment="CENTER" layoutX="142.0" layoutY="419.0" text="マギテック" textAlignment="CENTER" />
+                                          <TextField editable="false" layoutX="112.0" layoutY="264.0" prefHeight="27.0" prefWidth="35.0" />
+                                          <Label alignment="CENTER" layoutX="143.0" layoutY="446.0" text="デーモンルーラー" textAlignment="CENTER" />
+                                          <TextField editable="false" layoutX="95.0" layoutY="359.0" prefHeight="27.0" prefWidth="35.0" />
+                                          <Label alignment="CENTER" layoutX="414.0" layoutY="261.0" text="レンジャー" textAlignment="CENTER" />
+                                          <TextField editable="false" layoutX="501.0" layoutY="417.0" prefHeight="27.0" prefWidth="35.0" />
+                                          <Label alignment="CENTER" layoutX="414.0" layoutY="288.0" text="セージ" textAlignment="CENTER" />
+                                          <TextField editable="false" layoutX="501.0" layoutY="390.0" prefHeight="27.0" prefWidth="35.0" />
+                                          <Label alignment="CENTER" layoutX="414.0" layoutY="315.0" text="エンハンサー" textAlignment="CENTER" />
+                                          <TextField editable="false" layoutX="501.0" layoutY="444.0" prefHeight="27.0" prefWidth="35.0" />
+                                          <Label alignment="CENTER" layoutX="414.0" layoutY="342.0" text="バード" textAlignment="CENTER" />
+                                          <TextField editable="false" layoutX="227.0" layoutY="333.0" prefHeight="27.0" prefWidth="35.0" />
+                                          <Label alignment="CENTER" layoutX="414.0" layoutY="369.0" text="ライダー" textAlignment="CENTER" />
+                                          <TextField editable="false" layoutX="95.0" layoutY="386.0" prefHeight="27.0" prefWidth="35.0" />
+                                          <Label alignment="CENTER" layoutX="414.0" layoutY="396.0" text="アルケミスト" textAlignment="CENTER" />
+                                          <TextField editable="false" layoutX="501.0" layoutY="309.0" prefHeight="27.0" prefWidth="35.0" />
+                                          <Label alignment="CENTER" layoutX="419.0" layoutY="234.0" text="スカウト" textAlignment="CENTER" />
+                                          <TextField editable="false" layoutX="227.0" layoutY="414.0" prefHeight="27.0" prefWidth="35.0" />
+                                          <Label alignment="CENTER" layoutX="414.0" layoutY="423.0" text="ウォーリーダー" textAlignment="CENTER" />
+                                          <TextField editable="false" layoutX="250.0" layoutY="264.0" prefHeight="27.0" prefWidth="35.0" />
+                                          <Label alignment="CENTER" layoutX="414.0" layoutY="450.0" text="ミスティック" textAlignment="CENTER" />
+                                          <TextField editable="false" layoutX="95.0" layoutY="332.0" prefHeight="27.0" prefWidth="35.0" />
+                                          <Label alignment="CENTER" layoutX="584.0" layoutY="94.0" text="戦闘特技" />
+                                          <TableView layoutX="584.0" layoutY="119.0" prefHeight="420.0">
                                              <columns>
-                                                <TableColumn prefWidth="75.0" text="器用" />
-                                                <TableColumn prefWidth="75.0" text="敏捷" />
-                                                <TableColumn prefWidth="75.0" text="筋力" />
-                                                <TableColumn prefWidth="75.0" text="生命" />
-                                                <TableColumn prefWidth="75.0" text="知力" />
-                                                <TableColumn prefWidth="75.0" text="精神" />
+                                                <TableColumn prefWidth="215.0" text="戦闘特技名" />
+                                                <TableColumn prefWidth="59.0" text="特技レベル" />
                                              </columns>
                                           </TableView>
-                                          <Label alignment="CENTER" layoutX="101.0" layoutY="162.0" text="冒険者レベル" />
-                                          <TextField editable="false" layoutX="291.0" layoutY="323.0" prefHeight="27.0" prefWidth="35.0" />
-                                          <Label alignment="CENTER" layoutX="216.0" layoutY="162.0" text="魔法系レベル合計" />
-                                          <TextField editable="false" layoutX="542.0" layoutY="295.0" prefHeight="27.0" prefWidth="35.0" />
-                                          <Label alignment="CENTER" layoutX="101.0" layoutY="193.0" text="ファイター" textAlignment="CENTER" />
-                                          <TextField editable="false" layoutX="542.0" layoutY="187.0" prefHeight="27.0" prefWidth="35.0" />
-                                          <Label alignment="CENTER" layoutX="101.0" layoutY="220.0" text="グラップラー" textAlignment="CENTER" />
-                                          <TextField editable="false" layoutX="291.0" layoutY="188.0" prefHeight="27.0" prefWidth="35.0" />
-                                          <Label alignment="CENTER" layoutX="101.0" layoutY="247.0" text="フェンサー" textAlignment="CENTER" />
-                                          <TextField editable="false" layoutX="291.0" layoutY="269.0" prefHeight="27.0" prefWidth="35.0" />
-                                          <Label alignment="CENTER" layoutX="101.0" layoutY="274.0" text="シューター" textAlignment="CENTER" />
-                                          <TextField editable="false" layoutX="542.0" layoutY="214.0" prefHeight="27.0" prefWidth="35.0" />
-                                          <Label alignment="CENTER" layoutX="206.0" layoutY="194.0" text="ソーサラー" textAlignment="CENTER" />
-                                          <TextField editable="false" layoutX="542.0" layoutY="241.0" prefHeight="27.0" prefWidth="35.0" />
-                                          <Label alignment="CENTER" layoutX="206.0" layoutY="220.0" text="コンジャラー" textAlignment="CENTER" />
-                                          <TextField editable="false" layoutX="159.0" layoutY="187.0" prefHeight="27.0" prefWidth="35.0" />
-                                          <Label alignment="CENTER" layoutX="206.0" layoutY="249.0" text="プリースト" textAlignment="CENTER" />
-                                          <TextField editable="false" layoutX="542.0" layoutY="322.0" prefHeight="27.0" prefWidth="35.0" />
-                                          <Label alignment="CENTER" layoutX="331.0" layoutY="247.0" text="信仰" />
-                                          <TextField editable="false" layoutX="361.0" layoutY="241.0" prefHeight="27.0" prefWidth="99.0" />
-                                          <Label alignment="CENTER" layoutX="206.0" layoutY="274.0" text="フェアリーテイマー" textAlignment="CENTER" />
-                                          <TextField editable="false" layoutX="291.0" layoutY="242.0" prefHeight="27.0" prefWidth="35.0" />
-                                          <Label alignment="CENTER" layoutX="206.0" layoutY="301.0" text="マギテック" textAlignment="CENTER" />
-                                          <TextField editable="false" layoutX="176.0" layoutY="156.0" prefHeight="27.0" prefWidth="35.0" />
-                                          <Label alignment="CENTER" layoutX="207.0" layoutY="328.0" text="デーモンルーラー" textAlignment="CENTER" />
-                                          <TextField editable="false" layoutX="159.0" layoutY="241.0" prefHeight="27.0" prefWidth="35.0" />
-                                          <Label alignment="CENTER" layoutX="470.0" layoutY="220.0" text="レンジャー" textAlignment="CENTER" />
-                                          <TextField editable="false" layoutX="542.0" layoutY="376.0" prefHeight="27.0" prefWidth="35.0" />
-                                          <Label alignment="CENTER" layoutX="470.0" layoutY="247.0" text="セージ" textAlignment="CENTER" />
-                                          <TextField editable="false" layoutX="542.0" layoutY="349.0" prefHeight="27.0" prefWidth="35.0" />
-                                          <Label alignment="CENTER" layoutX="470.0" layoutY="274.0" text="エンハンサー" textAlignment="CENTER" />
-                                          <TextField editable="false" layoutX="542.0" layoutY="403.0" prefHeight="27.0" prefWidth="35.0" />
-                                          <Label alignment="CENTER" layoutX="470.0" layoutY="301.0" text="バード" textAlignment="CENTER" />
-                                          <TextField editable="false" layoutX="291.0" layoutY="215.0" prefHeight="27.0" prefWidth="35.0" />
-                                          <Label alignment="CENTER" layoutX="470.0" layoutY="328.0" text="ライダー" textAlignment="CENTER" />
-                                          <TextField editable="false" layoutX="159.0" layoutY="268.0" prefHeight="27.0" prefWidth="35.0" />
-                                          <Label alignment="CENTER" layoutX="470.0" layoutY="355.0" text="アルケミスト" textAlignment="CENTER" />
-                                          <TextField editable="false" layoutX="542.0" layoutY="268.0" prefHeight="27.0" prefWidth="35.0" />
-                                          <Label alignment="CENTER" layoutX="475.0" layoutY="193.0" text="スカウト" textAlignment="CENTER" />
-                                          <TextField editable="false" layoutX="291.0" layoutY="296.0" prefHeight="27.0" prefWidth="35.0" />
-                                          <Label alignment="CENTER" layoutX="470.0" layoutY="382.0" text="ウォーリーダー" textAlignment="CENTER" />
-                                          <TextField editable="false" layoutX="314.0" layoutY="156.0" prefHeight="27.0" prefWidth="35.0" />
-                                          <Label alignment="CENTER" layoutX="470.0" layoutY="409.0" text="ミスティック" textAlignment="CENTER" />
-                                          <TextField editable="false" layoutX="159.0" layoutY="214.0" prefHeight="27.0" prefWidth="35.0" />
-                                          <Label alignment="CENTER" layoutX="626.0" layoutY="60.0" text="戦闘特技" />
-                                          <TableView layoutX="626.0" layoutY="85.0" prefHeight="420.0" prefWidth="503.0">
-                                             <columns>
-                                                <TableColumn prefWidth="228.0" text="自動習得" />
-                                                <TableColumn minWidth="5.0" prefWidth="274.0" text="レベルアップ取得">
-                                                   <columns>
-                                                      <TableColumn prefWidth="215.0" text="戦闘特技名" />
-                                                      <TableColumn prefWidth="59.0" text="特技レベル" />
-                                                   </columns></TableColumn>
-                                             </columns>
-                                          </TableView>
+                                          <TextField editable="false" layoutX="79.0" layoutY="188.0" prefHeight="27.0" prefWidth="35.0" />
+                                          <TextField editable="false" layoutX="79.0" layoutY="80.0" prefHeight="27.0" prefWidth="35.0" />
+                                          <TextField editable="false" layoutX="79.0" layoutY="107.0" prefHeight="27.0" prefWidth="35.0" />
+                                          <TextField editable="false" layoutX="79.0" layoutY="134.0" prefHeight="27.0" prefWidth="35.0" />
+                                          <TextField editable="false" layoutX="79.0" layoutY="215.0" prefHeight="27.0" prefWidth="35.0" />
+                                          <Label alignment="CENTER" layoutX="42.0" layoutY="113.0" text="敏捷" textAlignment="CENTER" />
+                                          <Label alignment="CENTER" layoutX="42.0" layoutY="140.0" text="筋力" textAlignment="CENTER" />
+                                          <Label alignment="CENTER" layoutX="42.0" layoutY="167.0" text="生命" textAlignment="CENTER" />
+                                          <Label alignment="CENTER" layoutX="42.0" layoutY="194.0" text="知力" textAlignment="CENTER" />
+                                          <Label alignment="CENTER" layoutX="42.0" layoutY="221.0" text="精神" textAlignment="CENTER" />
+                                          <TextField editable="false" layoutX="79.0" layoutY="161.0" prefHeight="27.0" prefWidth="35.0" />
+                                          <Label alignment="CENTER" layoutX="42.0" layoutY="86.0" text="器用" textAlignment="CENTER" />
+                                          <Label alignment="CENTER" layoutX="77.0" layoutY="60.0" text="能力値" textAlignment="CENTER" />
+                                          <TextField editable="false" layoutX="129.0" layoutY="188.0" prefHeight="27.0" prefWidth="35.0" />
+                                          <TextField editable="false" layoutX="129.0" layoutY="80.0" prefHeight="27.0" prefWidth="35.0" />
+                                          <TextField editable="false" layoutX="129.0" layoutY="107.0" prefHeight="27.0" prefWidth="35.0" />
+                                          <TextField editable="false" layoutX="129.0" layoutY="134.0" prefHeight="27.0" prefWidth="35.0" />
+                                          <TextField editable="false" layoutX="129.0" layoutY="215.0" prefHeight="27.0" prefWidth="35.0" />
+                                          <TextField editable="false" layoutX="129.0" layoutY="161.0" prefHeight="27.0" prefWidth="35.0" />
+                                          <Label alignment="CENTER" layoutX="127.0" layoutY="61.0" text="ボーナス" textAlignment="CENTER" />
+                                          <TextField editable="false" layoutX="227.0" layoutY="468.0" prefHeight="27.0" prefWidth="35.0" />
+                                          <Label alignment="CENTER" layoutX="143.0" layoutY="473.0" text="グリモワール" textAlignment="CENTER" />
+                                          <TextField editable="false" layoutX="501.0" layoutY="471.0" prefHeight="27.0" prefWidth="35.0" />
+                                          <Label alignment="CENTER" layoutX="414.0" layoutY="477.0" text="フィジカルマスター" textAlignment="CENTER" />
+                                          <TextField editable="false" layoutX="501.0" layoutY="498.0" prefHeight="27.0" prefWidth="35.0" />
+                                          <Label alignment="CENTER" layoutX="414.0" layoutY="504.0" text="アーティザン" textAlignment="CENTER" />
+                                          <TextField editable="false" layoutX="501.0" layoutY="525.0" prefHeight="27.0" prefWidth="35.0" />
+                                          <Label alignment="CENTER" layoutX="414.0" layoutY="531.0" text="アリストクラシー" textAlignment="CENTER" />
                                        </children>
                                     </AnchorPane>
                               </content>
